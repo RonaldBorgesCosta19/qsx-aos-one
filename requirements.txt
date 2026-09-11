@@ -1,0 +1,145 @@
+# QSX-AOS ONE Requirements
+# Comprehensive stack for verifiable quantitative trading system
+
+# ============================================================================
+# Core Framework & API
+# ============================================================================
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.5.0
+pydantic-settings==2.1.0
+python-dotenv==1.0.0
+
+# ============================================================================
+# Database & Storage
+# ============================================================================
+sqlalchemy==2.0.23
+psycopg[binary]==3.17.0
+alembic==1.13.0
+redis==5.0.1
+
+# ============================================================================
+# Market Data & Charting
+# ============================================================================
+pandas==2.1.3
+numpy==1.26.2
+ta==0.10.2  # Technical Analysis Library
+talib-binary==0.4.28  # TA-Lib for indicators
+
+# Charts & Visualization
+plotly==5.18.0
+dash==2.14.1
+kaleido==0.2.1
+
+# Candlestick & Renko
+mplfinance==0.12.10
+bokeh==3.3.1
+
+# ============================================================================
+# Machine Learning & AI
+# ============================================================================
+# Deferred for G7 (AI Swarm) - Phase 2
+# scikit-learn
+# xgboost
+# lightgbm
+# catboost
+# torch
+# tensorflow
+# transformers
+
+# For now: statistical analysis
+scipy==1.11.4
+statsmodels==0.14.0
+
+# ============================================================================
+# Async & Concurrency
+# ============================================================================
+httpx==0.25.2
+aiohttp==3.9.1
+websockets==12.0
+asyncio-contextmanager==1.0.0
+
+# ============================================================================
+# Testing & Quality
+# ============================================================================
+pytest==7.4.3
+pytest-asyncio==0.21.1
+pytest-cov==4.1.0
+pytest-xdist==3.5.0
+
+# Code Quality
+black==23.12.0
+isort==5.13.2
+flake8==6.1.0
+mypy==1.7.1
+
+# ============================================================================
+# Logging & Monitoring
+# ============================================================================
+python-json-logger==2.0.7
+structlog==23.2.0
+loguru==0.7.2
+
+# Observability
+prometheus-client==0.19.0
+opentelemetry-api==1.21.0
+opentelemetry-sdk==1.21.0
+
+# ============================================================================
+# Utilities
+# ============================================================================
+pyyaml==6.0.1
+tenacity==8.2.3  # Retry logic
+croniter==2.0.1  # Cron expressions
+pytz==2023.3
+
+# UUID & Time
+python-dateutil==2.8.2
+
+# Serialization
+msgpack==1.0.7
+orjson==3.9.10
+
+# ============================================================================
+# Development Tools
+# ============================================================================
+ipython==8.18.1
+jupyter==1.0.0
+notebook==7.0.6
+
+# Documentation
+sphinx==7.2.6
+sphinx-rtd-theme==2.0.0
+
+# Pre-commit hooks
+pre-commit==3.5.0
+
+# ============================================================================
+# Optional for Phase 2+
+# ============================================================================
+# For G4: Async database
+# sqlalchemy[asyncio]
+# asyncpg
+
+# For G5: Backtesting
+# backtrader
+# zipline-reloaded
+
+# For G6: Frontend (if Node.js not used)
+# Not applicable - Cockpit in separate repo
+
+# For G7: AI Swarm models
+# transformers
+# torch
+# langchain
+# ollama
+
+# For G8: Simulation
+# simpy
+# mesa
+
+# ============================================================================
+# Production Dependencies
+# ============================================================================
+gunicorn==21.2.0
+python-multipart==0.0.6
