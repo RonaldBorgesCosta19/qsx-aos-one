@@ -305,3 +305,21 @@ Next: Event definitions, Event Store implementation, Replay tests.
 **Repository**: https://github.com/RonaldBorgesCosta19/qsx-aos-one
 
 **Contact**: Ronald Borges Costa
+
+## Implementação Base44 (motor em produção)
+
+A implementação funcional do QSX-AOS ONE está em [`base44-engine/`](base44-engine/) —
+motor de paper trading em TypeScript rodando na plataforma Base44:
+
+- **v1.3 multi-carteira**: AGGRESSIVE (pos 10%, TP 4%, SL 2%, veto dd 10%) e
+  CONSERVATIVE (pos 5%, TP 3%, SL 1,5%, veto dd 6%), capital virtual de 100k cada
+- **G0/G1 implementados**: EventStore append-only com hash chain SHA256
+  (event_id, correlation_id, causation_id, previous_hash, event_hash),
+  verificador de cadeia e replay test determinístico
+- **G2 parcial**: Regime Engine (BULL/BEAR/RANGE), Alpha Registry + Swarm
+  (ensemble com pesos registrados) e Risk Governor com veto real
+- Dados de mercado via Kraken (fallback OKX), APIs públicas, zero segredos
+- Instalação em outra conta: siga o [`SETUP.md`](base44-engine/SETUP.md)
+
+A pasta raiz (`core/`, `engines/`, `tests/`) mantém a implementação de referência
+em Python do spec original.
